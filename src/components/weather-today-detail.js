@@ -6,10 +6,6 @@ import { Link } from 'react-router';
 
 class WeatherTodayDetail extends Component {
 
-  constructor(props) {
-    super(props);
-  }
-
   renderWeatherView(data) {
 
     console.log(data)
@@ -50,7 +46,7 @@ class WeatherTodayDetail extends Component {
 
     return (
       <div>
-      {this.renderWeatherView(this.props.weather)}
+      {this.renderWeatherView(this.props.weather_today)}
       </div>
     )
   }
@@ -61,7 +57,8 @@ class WeatherTodayDetail extends Component {
 
 function mapStateToProps(state, props) {
   return { 
-    weather: state.weather_today
+    weather_today: state.weather_today,
+    weather_five: state.weather_five
   };
 }
 

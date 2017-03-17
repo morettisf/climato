@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { weatherToday } from '../actions/index';
+import { weatherFive } from '../actions/index';
 
 export class SearchBar extends Component {
 
@@ -22,7 +23,17 @@ export class SearchBar extends Component {
   onFormSubmit(event) {
     event.preventDefault();
 
-    this.props.weatherToday(this.state.term);
+    let url = window.location.pathname;
+    let urlEnd = url.split('/').pop()
+
+    if (urlEnd === 'five') {
+      this.props.weatherFive(this.state.term);
+    }
+
+    else {
+      this.props.weatherToday(this.state.term);
+    }
+
     this.setState({ term: '' }); // clears out search box after searching
   }
 
@@ -43,7 +54,7 @@ export class SearchBar extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ weatherToday }, dispatch);
+  return bindActionCreators({ weatherToday, weatherFive }, dispatch);
 }
 
 // null is for state
