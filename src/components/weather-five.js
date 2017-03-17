@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import SearchBar from '../containers/searchbar';
+import SearchBar from '../components/searchbar';
 
 export default class WeatherFive extends Component {
   render() {
