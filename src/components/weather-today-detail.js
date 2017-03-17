@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
+import WeatherStyle from './weather-style';
+import { Link } from 'react-router';
 
 class WeatherTodayDetail extends Component {
 
@@ -16,13 +17,17 @@ class WeatherTodayDetail extends Component {
 
       const name = data.name;
       const currentConditions = data.weather[0].main;
-      const currentTemp = data.main.temp;
-      const tempMin = data.main.temp_min;
-      const tempMax = data.main.temp_max;
+      const currentTemp = (((data.main.temp - 273.15) * 9/5) + 32).toFixed();
+      const tempMin = (((data.main.temp_min - 273.15) * 9/5) + 32).toFixed();
+      const tempMax = (((data.main.temp_max - 273.15) * 9/5) + 32).toFixed();
       const humidity = data.main.humidity;
+
+      if (currentConditions)
 
       return (
         <div>
+          <WeatherStyle wstyle={currentConditions} />
+          <Link to={'/five'}><button>5 Day Forecast</button></Link>
           <div>Location: {name}</div>
           <div>Current Conditions: {currentConditions}</div>
           <div>Current Temp: {currentTemp}</div>
