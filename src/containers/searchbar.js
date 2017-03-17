@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { weatherToday } from '../actions/index';
 
-export default class SearchBar extends Component {
+export class SearchBar extends Component {
 
   constructor(props) {
     super(props);
 
     this.state = { term: '' };
 
+    // binding these to the component's state
     this.onInputChange = this.onInputChange.bind(this);
     this.onFormSubmit = this.onFormSubmit.bind(this);
-
   }
 
   onInputChange(event) {
@@ -19,12 +22,13 @@ export default class SearchBar extends Component {
   onFormSubmit(event) {
     event.preventDefault();
 
-    this.setState({ term: '' });
+    this.props.weatherToday(this.state.term);
+    this.setState({ term: '' }); // clears out search box after searching
   }
 
   render() {
     return (
-      <form className='input-group'>
+      <form onSubmit={this.onFormSubmit} className='input-group'>
         <input 
           placeholder='Search for your location'
           className='form-control'
@@ -37,3 +41,10 @@ export default class SearchBar extends Component {
     );
   }
 }
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ weatherToday }, dispatch);
+}
+
+// null is for state
+export default connect(null, mapDispatchToProps)(SearchBar);
