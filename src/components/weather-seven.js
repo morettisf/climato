@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 
 import Header from '../components/header';
 import SearchBar from '../components/searchbar';
-import WeatherTodayDetail from '../components/weather-today-detail';
+import WeatherSevenDetail from '../components/weather-seven-detail';
 
-export default class WeatherToday extends Component {
+export default class WeatherSeven extends Component {
   render() {
     return (
       <div>
         <Header />
         <SearchBar />
-        <WeatherTodayDetail />
+        <WeatherSevenDetail />
       </div>
     );
   }

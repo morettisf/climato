@@ -3,11 +3,11 @@ import { Route, IndexRoute } from 'react-router';
 
 import App from './components/app';
 import WeatherToday from './components/weather-today';
-import WeatherFive from './components/weather-five';
+import WeatherSeven from './components/weather-seven';
 
 export default (
 <Route path='/' component={App}>
   <IndexRoute component={WeatherToday} />
-  <Route path='five' component={WeatherFive} />
+  <Route path='seven' component={WeatherSeven} />
 </Route>
 );

@@ -2,13 +2,16 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
 
-class WeatherFiveDetail extends Component {
+class WeatherSevenDetail extends Component {
 
   renderWeatherView(data) {
       console.log(data)
 
-    if (data.name) {
+    if (data.city) {
 
+      const city = data.city.name
+
+      return <div>{city}</div>
     }
 
     else {
@@ -21,7 +24,7 @@ class WeatherFiveDetail extends Component {
 
     return (
       <div>
-      {this.renderWeatherView(this.props.weather_five)}
+      {this.renderWeatherView(this.props.weather)}
       </div>
     )
   }
@@ -30,9 +33,8 @@ class WeatherFiveDetail extends Component {
 
 function mapStateToProps(state, props) {
   return { 
-    weather_five: state.weather_five,
-    weather_today: state.weather_today
+    weather: state.weather
   };
 }
 
-export default connect(mapStateToProps)(WeatherFiveDetail);
+export default connect(mapStateToProps)(WeatherSevenDetail);

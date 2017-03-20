@@ -14,7 +14,12 @@ module.exports = {
       query: {
         presets: ['react', 'es2015', 'stage-1']
       }
-    }]
+    },
+    {
+    test: /\.(jpg|png|svg)$/,
+    loader: 'file',
+    include: './images'
+  }]
   },
   resolve: {
     extensions: ['', '.js', '.jsx']

@@ -4,13 +4,31 @@ const WeatherStyle = ({wstyle}) => {
   console.log(wstyle)
   if (wstyle === 'Clouds') {
     return (
-    <div className='blue'></div>
+    <div className='cloudy'></div>
+    )
+  }
+
+  if (wstyle === 'Rain') {
+    return (
+    <div className='rainy'></div>
+    )
+  }
+
+  if (wstyle === 'Clear') {
+    return (
+    <div className='sunny'></div>
+    )
+  }
+
+  if (wstyle === 'Snow') {
+    return (
+    <div className='snowy'></div>
     )
   }
 
   else {
     return (
-    <div className='red'></div>
+    <div className='cloudy'></div>
     )
   }
 }
