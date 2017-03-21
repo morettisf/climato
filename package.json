@@ -4,7 +4,8 @@
   "description": "Climato weather app",
   "main": "index.js",
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "babel-node": "babel-node",
+    "start": "webpack && npm run babel-node -- server.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
     "test:watch": "npm run test -- --watch",
     "heroku-postbuild": "webpack -p --config ./webpack.prod.config.js --progress"
@@ -27,6 +28,7 @@
   },
   "dependencies": {
     "axios": "^0.15.3",
+    "babel-cli": "^6.24.0",
     "babel-preset-stage-1": "^6.1.18",
     "lodash": "^3.10.1",
     "react": "^0.14.3",
