@@ -7,8 +7,7 @@
     "babel-node": "babel-node",
     "start": "webpack && npm run babel-node -- server.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
-    "test:watch": "npm run test -- --watch",
-    "heroku-postbuild": "webpack -p --config ./webpack.prod.config.js --progress"
+    "test:watch": "npm run test -- --watch"
   },
   "author": "",
   "license": "ISC",

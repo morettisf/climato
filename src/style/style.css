@@ -78,7 +78,6 @@ th, td {
   right: 15px;
 }
 
-
 /* SUNNY */
 .sunny { 
   animation: sunny 15s linear infinite;
@@ -88,7 +87,7 @@ th, td {
   margin-left: -15px;
   position: absolute;
   left: 50%;  
-  top: 335px;
+  top: 295px;
 }
 .sunny:before {
   background: linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
@@ -552,3 +551,14 @@ th, td {
       #EEEEEE 90px 35px;
   }
 }
+
+/*.weather-box {
+  background-color: #00BBFF;
+  transform: scale(.9);
+  width: 1200px;
+  position: absolute;
+  height: 210px;
+  left: 50%;
+  top: 50%;
+  margin: -65px -600px;
+}*/

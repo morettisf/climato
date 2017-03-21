@@ -10,13 +10,13 @@ const WeatherStyle = ({wstyle}) => {
 
   if (wstyle === 'Rain') {
     return (
-    <div className='rainy'></div>
+    <div><div className='rainy'></div></div>
     )
   }
 
   if (wstyle === 'Clear') {
     return (
-    <div className='sunny'></div>
+    <div className='weather-box'><div className='sunny'></div></div>
     )
   }
 
