@@ -18,16 +18,21 @@ html, body {
   margin-bottom: 25px;
 }
 
-h2 {
+h1 {
   font-size: 1.75em !important;
 }
 
-h1, h2 {
+h2 {
+  font-size: 1em !important;
+  font-weight: normal;
+}
+
+h1, h2, h3 {
   text-align: center;
 }
 
 .weather-info {
-  margin-top: 190px;
+  margin-top: 195px;
   margin-bottom: 15px;
   font-size: 1.2em;
   overflow: hidden;
@@ -52,13 +57,13 @@ th img {
   height: 30px;
 }
 
-th {
-  background-color: lightblue;
-}
-
 th, td {
   padding: 4px !important;
   text-align: center !important;
+}
+
+.dow {
+  color: cornflowerblue;
 }
 
 .info1 img, .info2 img {
@@ -67,8 +72,10 @@ th, td {
   margin-left: 22px;
 }
 
-button {
-  float: right;
+#header-btn {
+  position: absolute;
+  top: 24px;
+  right: 15px;
 }
 
 
@@ -81,7 +88,7 @@ button {
   margin-left: -15px;
   position: absolute;
   left: 50%;  
-  top: 305px;
+  top: 335px;
 }
 .sunny:before {
   background: linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
@@ -126,7 +133,7 @@ button {
   margin-left: -60px;
   position: absolute;
   left: 50%;
-  top: 305px; 
+  top: 335px; 
 }
 .cloudy:after {
   animation: cloudy_shadow 5s ease-in-out infinite;
@@ -165,7 +172,7 @@ button {
   margin-left: -60px;
   position: absolute;
   left: 50%;
-  top: 305px; 
+  top: 335px; 
 }
 .rainy:after {
   animation: rainy_shadow 5s ease-in-out infinite 1s;
@@ -424,7 +431,7 @@ button {
   margin-left: -60px;
   position: absolute;
   left: 50%;
-  top: 305px; 
+  top: 335px; 
 }
 .snowy:after {
   animation: snowy_shadow 5s ease-in-out infinite 1s;

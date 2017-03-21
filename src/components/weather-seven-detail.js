@@ -16,7 +16,7 @@ class WeatherSevenDetail extends Component {
       let tableData = data.list.map((weather) => {
         return (
           <tr key={dayOfWeek(weather.dt)}>
-            <td>{dayOfWeek(weather.dt)}</td>
+            <td className='dow'>{dayOfWeek(weather.dt)}</td>
             <td>{weather.weather[0].main}</td>
             <td>{(((weather.temp.day - 273.15) * 9/5) + 32).toFixed()} F</td>
             <td>{(((weather.temp.night - 273.15) * 9/5) + 32).toFixed()} F</td>
@@ -43,7 +43,7 @@ class WeatherSevenDetail extends Component {
         <table>
           <thead>
             <tr>
-              <th>Day</th>
+              <th></th>
               <th></th>
               <th><img src='../../images/sun80.png' /></th>
               <th><img src='../../images/moon80.png' /></th>
@@ -55,7 +55,6 @@ class WeatherSevenDetail extends Component {
             {this.renderWeatherView(this.props.weather)}
           </tbody>
         </table>
-        <Link to={'/'}><button type='button' className='btn btn-primary-outline'>Today's Forecast</button></Link>
       </div>
     )
   }

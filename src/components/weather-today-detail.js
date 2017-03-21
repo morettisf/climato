@@ -16,6 +16,7 @@ class WeatherTodayDetail extends Component {
       const name = data.city.name;
       const date = fullDate(data.list[0].dt);
       const weatherType = data.list[0].weather[0].main;
+      const weatherTypeDetail = data.list[0].weather[0].description;
       const dayTemp = (((data.list[0].temp.day - 273.15) * 9/5) + 32).toFixed();
       const nightTemp = (((data.list[0].temp.night - 273.15) * 9/5) + 32).toFixed();
       const humidity = data.list[0].humidity;
@@ -25,7 +26,8 @@ class WeatherTodayDetail extends Component {
       return (
         <div>
           <GoogleMap lon={lon} lat={lat} />
-          <h2>{date}</h2>
+          <h1>{date}</h1>
+          <h2>{weatherTypeDetail}</h2>
           <WeatherStyle wstyle={weatherType} />
           <div className ='weather-info'>
             <div className='info1'>
@@ -37,7 +39,6 @@ class WeatherTodayDetail extends Component {
               <div className='wind'><img src='../../images/wind80.png' /> {windSpeed} mph</div>
             </div>
           </div>
-            <Link to={'/seven'}><button type='button' className='btn btn-primary-outline'>7 Day Forecast</button></Link>
         </div>
       )
 
