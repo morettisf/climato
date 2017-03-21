@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import WeatherStyle from './weather-style';
 import GoogleMap from './google_map';
 import { Link } from 'react-router';
-import dateConvert from './date-convert';
+import fullDate from './date-convert';
 
 class WeatherTodayDetail extends Component {
 
@@ -14,12 +14,12 @@ class WeatherTodayDetail extends Component {
     if (data.city) {
 
       const name = data.city.name;
-      const date = dateConvert(data.list[0].dt);
+      const date = fullDate(data.list[0].dt);
       const weatherType = data.list[0].weather[0].main;
       const dayTemp = (((data.list[0].temp.day - 273.15) * 9/5) + 32).toFixed();
       const nightTemp = (((data.list[0].temp.night - 273.15) * 9/5) + 32).toFixed();
       const humidity = data.list[0].humidity;
-      const windSpeed = (data.list[0].speed * 2.24).toFixed();;
+      const windSpeed = (data.list[0].speed * 2.24).toFixed();
       const { lon, lat } = data.city.coord;
 
       return (
