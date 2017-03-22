@@ -6,7 +6,6 @@ import dayOfWeek from './date-convert-short';
 class WeatherSevenDetail extends Component {
 
   renderWeatherView(data) {
-      console.log(data)
 
     if (data.city) {
 
@@ -31,7 +30,7 @@ class WeatherSevenDetail extends Component {
     }
 
     else {
-      return <tr><td>Nothing yet...</td></tr>
+      return <tr></tr>
     }
 
   }

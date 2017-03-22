@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import WeatherStyle from './weather-style';
-import GoogleMap from './google_map';
 import { Link } from 'react-router';
 import fullDate from './date-convert';
 
 class WeatherTodayDetail extends Component {
 
   renderWeatherView(data) {
-
-    console.log(data)
 
     if (data.city) {
 
@@ -45,7 +42,7 @@ class WeatherTodayDetail extends Component {
     }
 
     else {
-      return <div>Nothing yet...</div>
+      return <div></div>
     }
 
   }
