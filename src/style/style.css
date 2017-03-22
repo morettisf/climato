@@ -40,7 +40,7 @@ h3 {
 }
 
 h2, h3 {
-  font-weight: lighter !important;
+  font-weight: 200 !important;
 }
 
 h1, h2, h3 {
@@ -55,18 +55,12 @@ h1, h2, h3 {
 }
 
 .weather-box {
-/*  background-color: #00BBFF;*/
-  height: 180px;
+  height: 150px;
   width: 200px;
-  margin-bottom: 12px;
   margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.info1, .info2 {
-  float: left;
-  width: 50%;
+  transform: scale(0.9);
 }
 
 table {
@@ -93,6 +87,8 @@ th, td {
 }
 
 .info1, .info2 {
+  float: left;
+  width: 50%;
   text-align: center;
 }
 
@@ -115,7 +111,7 @@ th, td {
     margin-left: -12px;
     position: absolute;
     left: 50%;
-    top: 228px;
+    top: -4px;
 }
 .sunny:before {
     background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
@@ -164,7 +160,7 @@ th, td {
   margin-left: -60px;
   position: absolute;
   left: 50%;
-  top: 268px; 
+  top: 38px; 
 }
 .cloudy:after {
   animation: cloudy_shadow 5s ease-in-out infinite;
@@ -203,7 +199,7 @@ th, td {
   margin-left: -60px;
   position: absolute;
   left: 50%;
-  top: 268px; 
+  top: 28px; 
 }
 .rainy:after {
   animation: rainy_shadow 5s ease-in-out infinite 1s;
@@ -459,7 +455,7 @@ th, td {
     margin-left: -60px;
     position: absolute;
     left: 50%;
-    top: 268px;
+    top: 38px;
 }
 .snowy:after {
     animation: snowy_shadow 5s ease-in-out infinite 1s;
