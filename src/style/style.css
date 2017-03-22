@@ -12,6 +12,7 @@ html, body {
 
 .title {
   font-size: 3em;
+  font-weight: 200px;
   color: white;
   float: left;
 }
@@ -40,7 +41,7 @@ h3 {
 }
 
 h2, h3 {
-  font-weight: 200 !important;
+  font-weight: 300 !important;
 }
 
 h1, h2, h3 {
@@ -57,7 +58,6 @@ h1, h2, h3 {
 .weather-box {
   height: 150px;
   width: 200px;
-  margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
   transform: scale(0.9);
@@ -111,7 +111,6 @@ th, td {
     margin-left: -12px;
     position: absolute;
     left: 50%;
-    top: -4px;
 }
 .sunny:before {
     background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
@@ -160,7 +159,7 @@ th, td {
   margin-left: -60px;
   position: absolute;
   left: 50%;
-  top: 38px; 
+  top: 40px; 
 }
 .cloudy:after {
   animation: cloudy_shadow 5s ease-in-out infinite;
@@ -199,7 +198,7 @@ th, td {
   margin-left: -60px;
   position: absolute;
   left: 50%;
-  top: 28px; 
+  top: 40px; 
 }
 .rainy:after {
   animation: rainy_shadow 5s ease-in-out infinite 1s;
@@ -455,7 +454,7 @@ th, td {
     margin-left: -60px;
     position: absolute;
     left: 50%;
-    top: 38px;
+    top: 40px;
 }
 .snowy:after {
     animation: snowy_shadow 5s ease-in-out infinite 1s;
@@ -524,3 +523,32 @@ th, td {
 display: block;
 }
 
+@media (min-width: 768px) {
+
+  h1 {
+    font-size: 3em !important;
+  }
+
+  h2 {
+    font-size: 2.3em !important;
+  }
+
+  h3 {
+    font-size: 2.1em !important;
+  }
+
+  .weather-box {
+    transform: scale(1.5);
+    margin-top: 65px;
+    margin-bottom: 50px;
+  }
+
+  .input-group {
+    margin-bottom: 35px;
+  }
+
+  .weather-info {
+    margin-top: 50px;
+  }
+
+}
