@@ -7,14 +7,18 @@ module.exports = {
     publicPath: '/',
     filename: 'bundle.js'
   },
+  resolve: {
+    extensions: ['', '.js', '.jsx']
+  },
   devtool: 'source-map',
   module: {
-    loaders: [{
+    loaders: [
+    {
       test: /\.jsx$/,
       exclude: /node_modules/,
-      loader: 'babel-loader',
+      loader: 'babel',
       query: {
-        presets: ['es2015', 'react', 'stage-0']
+        presets: ['react', 'es2015', 'stage-0']
       }
     },
     {
@@ -22,9 +26,6 @@ module.exports = {
     loader: 'file',
     include: './images'
   }]
-  },
-  resolve: {
-    extensions: ['', '.js', '.jsx']
   },
   devServer: {
     historyApiFallback: true,
