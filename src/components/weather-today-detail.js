@@ -25,10 +25,10 @@ class WeatherTodayDetail extends Component {
 
       return (
         <div>
-          <GoogleMap lon={lon} lat={lat} />
-          <h1>{date}</h1>
-          <h2>{weatherTypeDetail}</h2>
+          <h1>{name}</h1>
+          <h2>{date}</h2>
           <WeatherStyle wstyle={weatherType} />
+          <h3>{weatherTypeDetail}</h3>
           <div className ='weather-info'>
             <div className='info1'>
               <div className='day'><img src='../../images/sun80.png' /> {dayTemp} F</div>

@@ -6,6 +6,7 @@ html, body {
 .title {
   font-size: 3em;
   color: cornflowerblue;
+  float: left;
 }
 
 .gmap {
@@ -15,16 +16,24 @@ html, body {
 }
 
 .input-group {
-  margin-bottom: 25px;
+  margin-bottom: 12px;
+  clear: both;
 }
 
 h1 {
-  font-size: 1.75em !important;
+  font-size: 2.2em !important;
 }
 
 h2 {
-  font-size: 1em !important;
-  font-weight: normal;
+  font-size: 1.5em !important;
+}
+
+h3 {
+  font-size: 1.3em !important;
+}
+
+h2, h3 {
+  font-weight: normal !important;
 }
 
 h1, h2, h3 {
@@ -32,10 +41,19 @@ h1, h2, h3 {
 }
 
 .weather-info {
-  margin-top: 195px;
-  margin-bottom: 15px;
+  margin-top: 15px;
   font-size: 1.2em;
   overflow: hidden;
+}
+
+.weather-box {
+  background-color: #00BBFF;
+  height: 180px;
+  width: 200px;
+  margin-bottom: 12px;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .info1, .info2 {
@@ -66,16 +84,18 @@ th, td {
   color: cornflowerblue;
 }
 
+.info1, .info2 {
+  text-align: center;
+}
+
 .info1 img, .info2 img {
   width: 30px;
   height: 30px;
-  margin-left: 22px;
 }
 
 #header-btn {
-  position: absolute;
-  top: 24px;
-  right: 15px;
+  float: right;
+  margin-top: 24px;
 }
 
 /* SUNNY */
@@ -84,10 +104,10 @@ th, td {
   background: linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%); 
   height: 140px;
   width: 20px; 
-  margin-left: -15px;
+  margin-left: -12px;
   position: absolute;
   left: 50%;  
-  top: 295px;
+  top: 228px;
 }
 .sunny:before {
   background: linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
@@ -132,7 +152,7 @@ th, td {
   margin-left: -60px;
   position: absolute;
   left: 50%;
-  top: 335px; 
+  top: 268px; 
 }
 .cloudy:after {
   animation: cloudy_shadow 5s ease-in-out infinite;
@@ -171,7 +191,7 @@ th, td {
   margin-left: -60px;
   position: absolute;
   left: 50%;
-  top: 335px; 
+  top: 268px; 
 }
 .rainy:after {
   animation: rainy_shadow 5s ease-in-out infinite 1s;
@@ -552,13 +572,3 @@ th, td {
   }
 }
 
-/*.weather-box {
-  background-color: #00BBFF;
-  transform: scale(.9);
-  width: 1200px;
-  position: absolute;
-  height: 210px;
-  left: 50%;
-  top: 50%;
-  margin: -65px -600px;
-}*/

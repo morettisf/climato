@@ -1,36 +1,36 @@
 import React from 'react';
 
 const WeatherStyle = ({wstyle}) => {
-  console.log(wstyle)
-  if (wstyle === 'Clouds') {
-    return (
-    <div className='cloudy'></div>
-    )
+
+  let condition;
+
+  switch (wstyle) {
+
+    case 'Clouds':
+      condition = 'cloudy'
+      break;
+    case 'Rain':
+      condition = 'rainy'
+      break;
+    case 'Clear':
+      condition = 'sunny'
+      break;
+    case 'Snow':
+      condition = 'snowy'
+      break;
+
+    default:
+      condition = 'cloudy'
+      break;
   }
 
-  if (wstyle === 'Rain') {
-    return (
-    <div><div className='rainy'></div></div>
-    )
-  }
+  return (
+    <div className='weather-box'><div className={condition}></div></div>
+  )
 
-  if (wstyle === 'Clear') {
-    return (
-    <div className='weather-box'><div className='sunny'></div></div>
-    )
-  }
-
-  if (wstyle === 'Snow') {
-    return (
-    <div className='snowy'></div>
-    )
-  }
-
-  else {
-    return (
-    <div className='cloudy'></div>
-    )
-  }
 }
+
+
+
 
 export default WeatherStyle
