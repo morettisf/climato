@@ -35,25 +35,40 @@ export class WeatherSevenDetail extends Component {
 
   }
 
+  renderCity(data) {
+    if (data.city) {
+      const name = data.city.name;
+      return name
+    }
+
+    else {
+      const name = ''
+      return name
+    }
+  }
+
   render() {
 
     return (
       <div>
-        <table>
-          <thead>
-            <tr>
-              <th></th>
-              <th></th>
-              <th><img src='../../images/sun80.png' /></th>
-              <th><img src='../../images/moon80.png' /></th>
-              <th><img src='../../images/humidity80.png' /></th>
-              <th><img src='../../images/wind80.png' /></th>
-            </tr>
-          </thead>
-          <tbody>
-            {this.renderWeatherView(this.props.weather)}
-          </tbody>
-        </table>
+        <h1>{this.renderCity(this.props.weather)}</h1>
+        <div>
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th></th>
+                <th><img src='../../images/sun80.png' /></th>
+                <th><img src='../../images/moon80.png' /></th>
+                <th><img src='../../images/humidity80.png' /></th>
+                <th><img src='../../images/wind80.png' /></th>
+              </tr>
+            </thead>
+            <tbody>
+              {this.renderWeatherView(this.props.weather)}
+            </tbody>
+          </table>
+        </div>
       </div>
     )
   }
