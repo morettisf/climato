@@ -5,6 +5,14 @@ html, body {
   color: white !important;
 }
 
+.background {
+  width: 250px;
+  position: absolute;
+  left: 50%;
+  top: 170px;
+  margin-left: -125px;
+}
+
 .btn-primary-outline {
   color: white !important;
   border-color: white !important;
@@ -426,6 +434,14 @@ th, td {
 
   .weather-info {
     margin-top: 50px;
+  }
+
+  .background {
+    width: 400px;
+    position: absolute;
+    left: 50%;
+    top: 200px;
+    margin-left: -200px;
   }
 
 }

@@ -42,7 +42,7 @@ export class WeatherTodayDetail extends Component {
     }
 
     else {
-      return <div></div>
+      return <div><img src='../../images/weather-combo.png' className='background' /></div>
     }
 
   }
