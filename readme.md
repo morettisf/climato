@@ -5,7 +5,7 @@ React/Redux capstone project at Thinkful (http://thinkful.com/)
 http://climato.herokuapp.com/
 
 ## Background
-Climato is a weather app that gathers today's forecast and your 7 day outlook. This app is focused around a React with Redux framework and utilizes data from http://openweathermap.org/.
+Climato is a weather app that gathers today's forecast and your 7 day outlook. This app is focused around a React with Redux framework and utilizes data from http://openweathermap.org/. Animated weather icons sourced from Fabrizio Bianchi https://codepen.io/fbrz/pen/iqtlk.
 
 ## Screenshots
 ![Screenshots](https://github.com/morettisf/climato/blob/master/screenshots/screenshot1.jpg)
