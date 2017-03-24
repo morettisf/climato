@@ -26,7 +26,7 @@ export class WeatherSevenDetail extends Component {
       });
 
         return (
-          <div>
+          <div className='main-content fade-in'>
             <table>
               <thead>
                 <tr>
@@ -54,12 +54,11 @@ export class WeatherSevenDetail extends Component {
   renderCity(data) {
     if (data.city) {
       const name = data.city.name;
-      return name
+      return <h1 className='main-content fade-in'>{name}</h1>
     }
 
     else {
-      const name = ''
-      return name
+      return <div></div>
     }
   }
 
@@ -67,7 +66,7 @@ export class WeatherSevenDetail extends Component {
 
     return (
       <div>
-        <h1>{this.renderCity(this.props.weather)}</h1>
+        <div>{this.renderCity(this.props.weather)}</div>
         <div>{this.renderWeatherView(this.props.weather)}</div>
       </div>
     )

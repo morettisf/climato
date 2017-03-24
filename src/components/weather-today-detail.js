@@ -21,7 +21,7 @@ export class WeatherTodayDetail extends Component {
       const { lon, lat } = data.city.coord;
 
       return (
-        <div>
+        <div className='main-content fade-in'>
           <h1>{name}</h1>
           <h2>{date}</h2>
           <WeatherStyle wstyle={weatherType} />
