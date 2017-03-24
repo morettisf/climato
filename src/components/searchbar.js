@@ -9,7 +9,7 @@ export class SearchBar extends Component {
     super(props);
 
     this.state = { term: '' };
-
+    
     // binding these to the component's state
     this.onInputChange = this.onInputChange.bind(this);
     this.onFormSubmit = this.onFormSubmit.bind(this);

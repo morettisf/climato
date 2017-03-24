@@ -4,7 +4,7 @@ import WeatherStyle from './weather-style';
 import { Link } from 'react-router';
 import fullDate from './date-convert';
 
-class WeatherTodayDetail extends Component {
+export class WeatherTodayDetail extends Component {
 
   renderWeatherView(data) {
 

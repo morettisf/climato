@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import dayOfWeek from './date-convert-short';
 
-class WeatherSevenDetail extends Component {
+export class WeatherSevenDetail extends Component {
 
   renderWeatherView(data) {
 

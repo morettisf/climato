@@ -6,7 +6,7 @@
   "scripts": {
     "babel-node": "babel-node",
     "start": "webpack && npm run babel-node -- server.js",
-    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
+    "test": "mocha --compilers js:babel-register test/**/*.js*",
     "test:watch": "npm run test -- --watch"
   },
   "author": "",
@@ -20,7 +20,7 @@
     "babel-preset-stage-1": "^6.22.0",
     "chai": "^3.5.0",
     "chai-jquery": "^2.0.0",
-    "jquery": "^2.2.1",
+    "enzyme": "^2.7.1",
     "jsdom": "^8.1.0",
     "mocha": "^2.4.5",
     "react-addons-test-utils": "^0.14.7",
@@ -29,12 +29,10 @@
   "dependencies": {
     "axios": "^0.15.3",
     "express": "^4.15.2",
-    "lodash": "^3.10.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-redux": "^4.0.0",
     "react-router": "^2.8.1",
-    "react-svg-loader": "^1.1.1",
     "redux": "^3.0.4",
     "redux-promise": "^0.5.3",
     "webpack": "^1.12.9"
