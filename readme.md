@@ -14,10 +14,12 @@ Climato is a weather app that gathers today's forecast and your 7 day outlook. T
 ## Technical
 * HTML
 * CSS
+* Bootstrap
 * JavaScript
 * React
 * Redux
 * Redux-router
+* Axios
 * Node.js
 * Express
 * Webpack
