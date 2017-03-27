@@ -74,6 +74,7 @@ h1, h2, h3 {
   margin-top: 20px;
   font-size: 1.2em;
   overflow: hidden;
+  vertical-align: middle;
 }
 
 .weather-box {
@@ -451,6 +452,7 @@ th, td {
 
   .weather-info {
     margin-top: 50px;
+    font-size: 1.6em;
   }
 
   .background {
@@ -459,6 +461,16 @@ th, td {
     left: 50%;
     top: 200px;
     margin-left: -200px;
+  }
+
+  .info1 img, .info2 img {
+    width: 50px;
+    height: 50px;
+  }
+
+  th img {
+    width: 50px;
+    height: 50px;
   }
 
 }
