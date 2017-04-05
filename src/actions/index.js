@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const API_KEY = '99432abb3ddeecb498442945d0d3366b';
 const WEATHER_URL = '//api.openweathermap.org/data/2.5/forecast/daily?'; // 7 day forecast
+const API_KEY = '99432abb3ddeecb498442945d0d3366b';
 
 export const GET_WEATHER = 'GET_WEATHER';
 
