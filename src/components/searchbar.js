@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { getWeather } from '../actions/index';
-import axios from 'axios';
 
 export class SearchBar extends Component {
 
@@ -14,28 +13,15 @@ export class SearchBar extends Component {
     // binding these to the component's state
     this.onInputChange = this.onInputChange.bind(this);
     this.onFormSubmit = this.onFormSubmit.bind(this);
-    // this.convertAddress = this.convertAddress.bind(this);
   }
 
   componentWillMount() {
-    // navigator.geolocation.getCurrentPosition(function(position) {
-    //   this.convertAddress(position.coords.latitude, position.coords.longitude);
-    // }.bind(this));
 
     window.initAutocomplete = function() {
       const autocomplete = new google.maps.places.Autocomplete(document.getElementById('autocomplete'), 
         {types: ['(cities)'], componentRestrictions: {country: 'us'}});
     }
   }
-
-  // convertAddress(lat, lon) {
-  //   // geocoding user's lat & lon to a location that's searchable
-  //   axios.get('https://maps.googleapis.com/maps/api/geocode/json?latlng=' + lat + ',' + lon + 
-  //     '&key=AIzaSyAi3rCykF43m8bXF0A9TD9qSnPf_VMUW8c')
-  //     .then((res) => {
-  //       this.setState({term: res.data.results[1].formatted_address})
-  //     })
-  // }
 
   onInputChange(event) {
     this.setState({ term: event.target.value });
