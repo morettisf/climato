@@ -5,6 +5,23 @@ html, body {
   color: white !important;
 }
 
+.landing-box {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.landing-h2 {
+  font-size: 1em !important;
+  font-weight: 300;
+  display: inline-block;
+  margin-left: 12px;
+}
+
+.landing-arrow {
+  display: inline-block;
+  width: 65px;
+}
+
 .main-content {
   animation-duration: 2s;
 }
@@ -22,7 +39,7 @@ html, body {
   width: 250px;
   position: absolute;
   left: 50%;
-  top: 170px;
+  top: 210px;
   margin-left: -125px;
 }
 
@@ -440,6 +457,10 @@ th, td {
     margin-top: 30px;
   }
 
+  .main-content {
+    margin-top: 60px;
+  }
+
   .weather-box {
     transform: scale(1.5);
     margin-top: 65px;
@@ -459,8 +480,22 @@ th, td {
     width: 400px;
     position: absolute;
     left: 50%;
-    top: 200px;
+    top: 300px;
     margin-left: -200px;
+  }
+
+  .landing-box {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .landing-h2 {
+    font-size: 2em !important;
+    margin-left: 24px;
+  }
+
+  .landing-arrow {
+    width: 100px;
   }
 
   .info1 img, .info2 img {

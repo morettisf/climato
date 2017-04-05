@@ -46,7 +46,15 @@ export class WeatherSevenDetail extends Component {
     }
 
     else {
-      return <div><img src='../../images/weather-combo.png' className='background' /></div>
+
+      return (
+        <div className='landing-box'>
+          <img src='../../images/arrow.png' className='landing-arrow' />
+          <h2 className='landing-h2'>Weather discovered here...</h2>
+          <div><img src='../../images/weather-combo.png' className='background' /></div>
+        </div>
+      )
+      
     }
 
   }

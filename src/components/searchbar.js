@@ -18,7 +18,7 @@ export class SearchBar extends Component {
   }
 
   componentWillMount() {
-
+    // prompt user to geolocate
     navigator.geolocation.getCurrentPosition(function(position) {
       this.convertAddress(position.coords.latitude, position.coords.longitude);
     }.bind(this));
@@ -30,9 +30,10 @@ export class SearchBar extends Component {
   }
 
   convertAddress(lat, lon) {
-    axios.get('https://maps.googleapis.com/maps/api/geocode/json?latlng=' + lat + ',' + lon + '&key=AIzaSyAi3rCykF43m8bXF0A9TD9qSnPf_VMUW8c')
+    // geocoding user's lat & lon to a location that's searchable
+    axios.get('https://maps.googleapis.com/maps/api/geocode/json?latlng=' + lat + ',' + lon + 
+      '&key=AIzaSyAi3rCykF43m8bXF0A9TD9qSnPf_VMUW8c')
       .then((res) => {
-        console.log(res)
         this.setState({term: res.data.results[1].formatted_address})
       })
   }
