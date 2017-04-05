@@ -31,3 +31,5 @@ Climato is a weather app that gathers today's forecast and your 7 day outlook. T
 * GitHub
 * Travis CI
 * Heroku
+* Openweathermap.org API
+* Google Maps API (Geocoding, Places)
