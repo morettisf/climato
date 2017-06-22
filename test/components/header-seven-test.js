@@ -2,7 +2,7 @@ import React from 'react';
 import { mount, shallow } from 'enzyme';
 import { expect } from 'chai';
 
-import Header from '../../src/components/header-seven';
+import Header from '../../src/components/weather-seven/header-seven';
 
 describe('<HeaderSeven />', function () {
   it('should have the name Header', function () {

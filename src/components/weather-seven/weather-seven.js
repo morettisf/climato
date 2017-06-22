@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import HeaderSeven from '../components/header-seven';
-import SearchBar from '../components/searchbar';
-import WeatherSevenDetail from '../components/weather-seven-detail';
+import HeaderSeven from './header-seven';
+import SearchBar from '../searchbar';
+import WeatherSevenDetail from './weather-seven-detail';
 
 export default class WeatherSeven extends Component {
   render() {
