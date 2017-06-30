@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { getWeather } from '../actions/index';
 
+
 export class SearchBar extends Component {
 
   constructor(props) {
@@ -30,7 +31,7 @@ export class SearchBar extends Component {
   onFormSubmit(event) {
     event.preventDefault();
 
-    this.props.getWeather(document.getElementById('autocomplete').value);
+    this.props.getWeather(this.refs.searchBox.value);
 
     this.setState({ term: '' }); // clears out search box after searching
   }
@@ -42,6 +43,7 @@ export class SearchBar extends Component {
           id='autocomplete'
           placeholder='Search for your location'
           className='form-control'
+          ref='searchBox'
           value={this.state.term}
           onChange={this.onInputChange} />
         <div className='input-group-btn'>
