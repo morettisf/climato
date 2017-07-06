@@ -3,13 +3,10 @@ import { mount, shallow } from 'enzyme';
 import sinon, { spy } from 'sinon';
 import { expect } from 'chai';
 
-// import configureStore from 'redux-mock-store';
-// const mockStore = configureStore();
-
 import { SearchBar } from '../../src/components/searchbar';
 
 
-describe('<SearchBar />', function () {
+describe('<SearchBar />', () => {
   it('should have the name SearchBar', () => {
     const TestComponent = () => <SearchBar />;
     const wrapper = shallow(<TestComponent />);

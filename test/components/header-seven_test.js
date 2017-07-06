@@ -2,10 +2,10 @@ import React from 'react';
 import { mount, shallow } from 'enzyme';
 import { expect } from 'chai';
 
-import Header from '../../src/components/weather-today/header-today';
+import Header from '../../src/components/weather-seven/header-seven';
 
-describe('<HeaderToday />', function () {
-  it('should have the name Header', function () {
+describe('<HeaderSeven />', () => {
+  it('should have the name Header', () => {
     const TestComponent = () => <Header />;
     const wrapper = shallow(<TestComponent />);
     expect(wrapper.name()).to.equal('Header');

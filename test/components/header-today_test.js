@@ -2,9 +2,9 @@ import React from 'react';
 import { mount, shallow } from 'enzyme';
 import { expect } from 'chai';
 
-import Header from '../../src/components/weather-seven/header-seven';
+import Header from '../../src/components/weather-today/header-today';
 
-describe('<HeaderSeven />', function () {
+describe('<HeaderToday />', () => {
   it('should have the name Header', function () {
     const TestComponent = () => <Header />;
     const wrapper = shallow(<TestComponent />);

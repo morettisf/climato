@@ -4,8 +4,8 @@ import { expect } from 'chai';
 
 import { WeatherSevenDetail } from '../../src/components/weather-seven/weather-seven-detail';
 
-describe('<WeatherSevenDetail />', function () {
-  it('should have the name WeatherSevenDetail', function () {
+describe('<WeatherSevenDetail />', () => {
+  it('should have the name WeatherSevenDetail', () => {
     const TestComponent = () => <WeatherSevenDetail />;
     const wrapper = shallow(<TestComponent />);
     expect(wrapper.name()).to.equal('WeatherSevenDetail');
