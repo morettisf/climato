@@ -1,5 +1,5 @@
 # Climato
-React/Redux capstone project at Thinkful (http://thinkful.com/)
+React w/ Redux Weather App 
 
 ## Live Site
 http://climato.herokuapp.com/
